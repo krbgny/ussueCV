@@ -12,12 +12,11 @@ nav{position:sticky;top:0;background:rgba(255,255,255,.94);backdrop-filter:blur(
 .navin{max-width:1050px;margin:auto;padding:12px 22px;display:flex;gap:18px;flex-wrap:wrap;align-items:center}
 nav a{color:var(--ink);text-decoration:none;font-size:.95rem}nav a:hover{color:var(--accent)}
 main{max-width:1050px;margin:auto;padding:28px 22px 60px}
-.hero{display:grid;grid-template-columns:1.5fr .7fr;gap:28px;align-items:center;background:linear-gradient(130deg,#fff,#eaf0ff);border:1px solid #e3e9fa;border-radius:26px;padding:34px;box-shadow:0 12px 35px #1b31500c}
+.hero{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;background:linear-gradient(130deg,#fff,#eaf0ff);border:1px solid #e3e9fa;border-radius:26px;padding:34px;box-shadow:0 12px 35px #1b31500c}
 .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem}
 h1{font-size:clamp(2.2rem,5vw,3.7rem);line-height:1.08;margin:10px 0 14px;letter-spacing:-.04em}
 .lead{font-size:1.12rem;color:#42516b;max-width:620px}
 .pills{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.pill{background:#e9edff;color:#334cc2;padding:6px 11px;border-radius:999px;font-size:.88rem;font-weight:600}
-.photo{width:190px;height:220px;border-radius:22px;background:#dfe7fa;display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;color:#42516b;border:2px dashed #a6b6e7;margin:auto}
 section{margin-top:34px;scroll-margin-top:80px}h2{font-size:1.7rem;margin:0 0 16px;letter-spacing:-.02em}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 .card{background:var(--card);border:1px solid #e6ebf3;border-radius:18px;padding:22px;box-shadow:0 8px 25px #1b315006}
@@ -28,7 +27,7 @@ details{border-top:1px solid #e7ecf5;padding-top:10px}summary{cursor:pointer;fon
 .contact{display:flex;gap:12px;flex-wrap:wrap}.contact a,.contact span{padding:11px 14px;background:#f6f8ff;border:1px solid #e1e7f5;border-radius:12px}
 footer{text-align:center;color:var(--muted);padding:28px 10px}
 button{border:0;border-radius:12px;background:var(--accent);color:#fff;padding:12px 17px;font-weight:700;cursor:pointer}button:hover{filter:brightness(.94)}
-@media(max-width:720px){.hero{grid-template-columns:1fr;padding:24px}.photo{width:150px;height:170px;grid-row:1}.grid{grid-template-columns:1fr}main{padding:18px 14px 40px}}
+@media(max-width:720px){.hero{padding:24px}.grid{grid-template-columns:1fr}main{padding:18px 14px 40px}}
 @media print{nav,button{display:none}.hero,.card{box-shadow:none;break-inside:avoid}body{background:#fff}}
 </style>
 </head>
@@ -45,20 +44,16 @@ button{border:0;border-radius:12px;background:var(--accent);color:#fff;padding:1
 <div class="pills"><span class="pill">1С:Предприятие</span><span class="pill">C#</span><span class="pill">Primo RPA</span><span class="pill">Аналитика данных</span></div>
 <button onclick="document.querySelector('#projects').scrollIntoView({behavior:'smooth'})">Посмотреть проекты ↓</button>
 </div>
-<img class="photo" src="photo.jpg" alt="Фото">
 </header>
-
 <section id="skills"><h2>Навыки</h2>
 <div class="card"><div class="skills">
 <span class="skill">1С:Предприятие 8.3</span><span class="skill">Язык запросов 1С</span><span class="skill">СКД и отчёты</span><span class="skill">Интеграции систем</span><span class="skill">C#</span><span class="skill">Primo RPA</span><span class="skill">SQL</span><span class="skill">Python</span><span class="skill">pandas / NumPy</span><span class="skill">Power BI</span><span class="skill">Apache Superset</span><span class="skill">Jira / Confluence</span><span class="skill">Excel: ВПР, сводные таблицы, формулы</span>
 </div></div></section>
-
 <section id="education"><h2>Образование</h2>
 <div class="card"><h3>Уральский государственный экономический университет (УрГЭУ)</h3>
 <p><b>Направление:</b> Информатика и вычислительная техника</p>
 <p><b>Профиль:</b> Программное обеспечение автоматизированных систем</p>
 <p class="muted">Студентка последнего курса (по предоставленной информации).</p></div></section>
-
 <section id="projects"><h2>Проекты</h2><div class="grid">
 <article class="card project"><h3>1. RPA-робот для переноса накладных</h3>
 <p>Разработала робота на C# и 1С в Primo RPA для автоматизации переноса накладных из StoreHouse в 1С:Бухгалтерию. Решение сокращает ручной перенос данных и помогает стандартизировать процесс.</p>
@@ -71,10 +66,9 @@ button{border:0;border-radius:12px;background:var(--accent);color:#fff;padding:1
 <a href="https://spb.hh.ru/resume/ed370628ff11330b840039ed1f38556a494947" target="_blank" rel="noopener">Открыть профиль резюме ↗</a>
 </article></div>
 <p class="muted">Ссылки на отдельные публичные демо проектов можно добавить после публикации репозиториев или обезличенных примеров.</p></section>
-
 <section id="contacts"><h2>Контакты</h2><div class="card">
 <p>Свяжитесь со мной по контактам ниже. Перед публикацией замените заполнители на актуальные данные.</p>
-<div class="contact"><a href="https://spb.hh.ru/resume/ed370628ff11330b840039ed1f38556a494947" target="_blank" rel="noopener">Резюме на hh.ru ↗</a><span>Email: добавьте адрес</span><span>Telegram: добавьте username</span></div>
+<div class="contact"><a href="https://spb.hh.ru/resume/ed370628ff11330b840039ed1f38556a494947" target="_blank" rel="noopener">Резюме на hh.ru ↗</a><span>Email: aula0@yandex.ru</span><span>Telegram: kreau</span></div>
 </div></section>
 <footer>© Яна Шпакова · Интерактивное резюме</footer>
 </main>
